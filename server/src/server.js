@@ -15,7 +15,6 @@ app.use(express.static('dist', {
 }));
 
 app.use('/api', todoRouter);
-console.log("Hello After Api")
 app.get('/*', (req, res) => res.redirect('/'));
 // app.post('/*', (req, res) => res.redirect('/'));
 app.use(errorHandler);

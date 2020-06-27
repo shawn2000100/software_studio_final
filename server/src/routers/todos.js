@@ -15,9 +15,11 @@ router.get('/todos', function(req, res, next){
     console.log(req.method);
     console.log(req.body);
     console.log(req.query);
+    // console.log(res);
 
     // const {email, pass} = req.query;
     // todoModel.createTodo(email, pass);
+    return "Res From Server"
 });
 
 module.exports = router;

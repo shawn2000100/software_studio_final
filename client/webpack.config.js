@@ -27,7 +27,7 @@ module.exports = {
     context: srcPath,
     resolve: {
         alias: {
-            api: path.resolve(srcPath, 'api')
+            api: path.resolve(distPath, 'images')
         }
     },
     entry: {

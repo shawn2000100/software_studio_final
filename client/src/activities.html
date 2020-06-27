@@ -176,7 +176,7 @@
                                         <button type="button" class="btn btn-default" data-dismiss="modal">
                                             close
                                         </button>
-                                        <input id="send" type="submit" class="btn btn-primary" value="send">
+                                        <input id="sendActivity" type="submit" class="btn btn-primary" value="send">
                                     </div>
                                 </form>
                             </div>
@@ -225,7 +225,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js" crossorigin="anonymous"></script>
 
     <!-- Template Main Javascript File -->
-    <script src="index.bundle.js"></script>
+    <script src="index.bundle.js"></script>    
+
+    <script type="text/javascript">
+        $('#sendActivity').submit(function(){
+            $.ajax({
+            url: $('#sendActivity').attr('action'),
+            type: 'GET',
+            data : $('#sendActivity').serialize(),
+                success: function(){
+                    console.log('form submitted.');
+                }
+            });
+            return false;
+        });
+    </script>
 
 </body>
 
